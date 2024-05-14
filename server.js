@@ -9,11 +9,12 @@ app.get('/chrome', async (req, res) => {
         const url = req.query.url;
 
         // 启动 Puppeteer 浏览器
-        const browser = await await puppeteer.launch({
-            // 根据实际路径进行更改
-             executablePath: './chrome-win/chrome.exe'  
+        // const browser = await await puppeteer.launch({
+        //     // 根据实际路径进行更改
+        //      executablePath: './chrome-win/chrome.exe'  
             
-            });
+        //     });
+        const browser = await puppeteer.launch();
         
             const page = await browser.newPage();
 
